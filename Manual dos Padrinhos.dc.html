@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;padding:0;height:100%;background:#2A1B14;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+a{color:#5C3A2E;text-decoration:none}
+a:hover{color:#2A1B14}
+@keyframes mp-hint{0%,100%{transform:translateX(0);opacity:.55}50%{transform:translateX(7px);opacity:1}}
+@keyframes mp-fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.mp-pg::-webkit-scrollbar{width:0}
+</style>
+</helmet>
+<div style="height:100dvh;width:100%;display:flex;align-items:stretch;justify-content:center;background:#2A1B14;overflow:hidden;font-family:Jost,system-ui,sans-serif">
+<div ref="{{ shell }}" onTouchStart="{{ onTouchStart }}" onTouchMove="{{ onTouchMove }}" onTouchEnd="{{ onTouchEnd }}" style="position:relative;width:100%;max-width:460px;height:100%;background:#FAF5EE;overflow:hidden;box-shadow:0 0 90px rgba(0,0,0,.55)">
+
+  <div style="position:absolute;top:0;left:0;right:0;height:3px;background:rgba(42,27,20,.09);z-index:5">
+    <div style="height:100%;background:#5C3A2E;transition:width .45s cubic-bezier(.22,1,.36,1);width:{{ progress }}"></div>
+  </div>
+
+  <div style="position:absolute;inset:0;display:flex;transition:transform .55s cubic-bezier(.22,1,.36,1);transform:{{ shift }}">
+
+    <section data-screen-label="01 Capa" class="mp-pg" style="flex:0 0 100%;height:100%;overflow-y:auto;background:#3B261C;color:#EFE3D4;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:56px 34px 150px">
+      <div style="width:34px;height:1px;background:rgba(239,227,212,.4);margin-bottom:40px"></div>
+      <div style="font:400 11px/1 Jost;letter-spacing:.42em;text-transform:uppercase;opacity:.65">Manual dos</div>
+      <h1 style="font:300 60px/.92 'Cormorant Garamond',serif;letter-spacing:.02em;margin:14px 0 0">Padrinhos</h1>
+      <div style="width:1px;height:46px;background:rgba(239,227,212,.35);margin:38px 0"></div>
+      <div style="font:300 34px/1.15 'Cormorant Garamond',serif">Ana <span style="font-style:italic;opacity:.7">e</span> Dhiego</div>
+      <div style="font:400 11px/1 Jost;letter-spacing:.34em;margin-top:22px;opacity:.6">28 . 05 . 2027</div>
+      <div style="position:absolute;bottom:92px;left:0;right:0;display:flex;align-items:center;justify-content:center;gap:9px;font:400 9.5px/1 Jost;letter-spacing:.3em;text-transform:uppercase;color:rgba(239,227,212,.6)">
+        <span>Deslize</span><span style="animation:mp-hint 1.9s ease-in-out infinite;font-size:13px">&rarr;</span>
+      </div>
+    </section>
+
+    <section data-screen-label="02 Boas-vindas" class="mp-pg" style="flex:0 0 100%;height:100%;overflow-y:auto;padding:88px 34px 104px;color:#2A1B14">
+      <div style="font:400 9.5px/1 Jost;letter-spacing:.34em;text-transform:uppercase;color:#A08A78">Um convite</div>
+      <h2 style="font:300 40px/1.08 'Cormorant Garamond',serif;margin:16px 0 0">Queridos padrinhos<br>e madrinhas</h2>
+      <div style="width:100%;height:1px;background:rgba(42,27,20,.12);margin:30px 0"></div>
+      <p style="font:300 17px/1.72 'Cormorant Garamond',serif;margin:0;color:#4A3128;text-wrap:pretty">Estamos muito felizes por ter vocês ao nosso lado neste momento tão especial. Preparamos este manual com carinho para compartilhar algumas orientações para o nosso grande dia.</p>
+      <div style="margin-top:44px;display:flex;flex-direction:column;gap:14px">
+        <div style="font:400 9.5px/1 Jost;letter-spacing:.3em;text-transform:uppercase;color:#A08A78">Nas próximas páginas</div>
+        <div style="display:flex;flex-direction:column;gap:11px;font:300 16px/1.3 'Cormorant Garamond',serif;color:#4A3128">
+          <div style="display:flex;gap:14px;align-items:baseline"><span style="font:400 10px Jost;color:#C0A992">01</span><span>O grande dia</span></div>
+          <div style="display:flex;gap:14px;align-items:baseline"><span style="font:400 10px Jost;color:#C0A992">02</span><span>Orientações dos trajes</span></div>
+          <div style="display:flex;gap:14px;align-items:baseline"><span style="font:400 10px Jost;color:#C0A992">03</span><span>Como chegar</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section data-screen-label="03 O grande dia" class="mp-pg" style="flex:0 0 100%;height:100%;overflow-y:auto;padding:88px 34px 104px;color:#2A1B14">
+      <div style="font:400 9.5px/1 Jost;letter-spacing:.34em;text-transform:uppercase;color:#A08A78">O grande dia</div>
+      <h2 style="font:300 40px/1.08 'Cormorant Garamond',serif;margin:16px 0 34px">28 de maio<br>de 2027</h2>
+      <div style="display:flex;flex-direction:column;gap:0;border-top:1px solid rgba(42,27,20,.12)">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:18px 0;border-bottom:1px solid rgba(42,27,20,.12)">
+          <span style="font:400 9.5px/1 Jost;letter-spacing:.24em;text-transform:uppercase;color:#A08A78">Local</span>
+          <span style="font:400 19px/1.2 'Cormorant Garamond',serif;text-align:right">Igreja Santa Edwiges</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:18px 0;border-bottom:1px solid rgba(42,27,20,.12)">
+          <span style="font:400 9.5px/1 Jost;letter-spacing:.24em;text-transform:uppercase;color:#A08A78">Chegada</span>
+          <span style="font:400 19px/1.2 'Cormorant Garamond',serif">10h30</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:18px 0;border-bottom:1px solid rgba(42,27,20,.12)">
+          <span style="font:400 9.5px/1 Jost;letter-spacing:.24em;text-transform:uppercase;color:#A08A78">Cerimônia</span>
+          <span style="font:400 19px/1.2 'Cormorant Garamond',serif">11h</span>
+        </div>
+      </div>
+      <div style="margin-top:32px;padding:22px 24px;background:#F0E6D9">
+        <p style="font:300 16px/1.65 'Cormorant Garamond',serif;margin:0;color:#4A3128;text-wrap:pretty">Pedimos pontualidade para a organização do cortejo e as orientações antes da cerimônia.</p>
+      </div>
+    </section>
+
+    <section data-screen-label="04 Trajes" class="mp-pg" style="flex:0 0 100%;height:100%;overflow-y:auto;padding:88px 34px 104px;color:#2A1B14">
+      <div style="font:400 9.5px/1 Jost;letter-spacing:.34em;text-transform:uppercase;color:#A08A78">Orientações</div>
+      <h2 style="font:300 40px/1.08 'Cormorant Garamond',serif;margin:16px 0 0">Dos trajes</h2>
+      <div style="width:100%;height:1px;background:rgba(42,27,20,.12);margin:30px 0"></div>
+      <p style="font:300 17px/1.72 'Cormorant Garamond',serif;margin:0;color:#4A3128;text-wrap:pretty">Para compor a paleta do nosso casamento, escolhemos um único tom de marrom chocolate.</p>
+      <div style="margin-top:38px;display:flex;align-items:center;gap:18px">
+        <div style="width:96px;height:96px;border-radius:50%;background:{{ chocolate }};box-shadow:0 10px 26px rgba(42,27,20,.28)"></div>
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <div style="font:400 9.5px/1 Jost;letter-spacing:.24em;text-transform:uppercase;color:#A08A78">Paleta</div>
+          <div style="font:300 22px/1.1 'Cormorant Garamond',serif">Marrom chocolate</div>
+          <div style="font:400 10px/1 Jost;letter-spacing:.16em;color:#A08A78">{{ chocolateLabel }}</div>
+        </div>
+      </div>
+      <div style="margin-top:42px;display:flex;flex-direction:column;gap:10px">
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:16px 20px;background:#F0E6D9;font:300 18px/1 'Cormorant Garamond',serif">Para as madrinhas<span style="font:400 10px Jost;letter-spacing:.2em;color:#A08A78">PÁG. 05</span></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:16px 20px;background:#F0E6D9;font:300 18px/1 'Cormorant Garamond',serif">Para os padrinhos<span style="font:400 10px Jost;letter-spacing:.2em;color:#A08A78">PÁG. 06</span></div>
+      </div>
+    </section>
+
+    <section data-screen-label="05 Madrinhas" class="mp-pg" style="flex:0 0 100%;height:100%;overflow-y:auto;background:#F3EAE0;color:#2A1B14;display:flex;flex-direction:column">
+      <div style="padding:82px 34px 0">
+        <div style="font:400 9.5px/1 Jost;letter-spacing:.34em;text-transform:uppercase;color:#A08A78">Para as</div>
+        <h2 style="font:300 40px/1.08 'Cormorant Garamond',serif;margin:14px 0 18px">Madrinhas</h2>
+        <p style="font:300 16px/1.68 'Cormorant Garamond',serif;margin:0 0 4px;color:#4A3128;text-wrap:pretty">Escolham um modelo que combine com seu estilo e faça vocês se sentirem confortáveis e elegantes.</p>
+      </div>
+      <div style="flex:1;min-height:300px;display:flex;align-items:flex-end;justify-content:center;padding:0 14px 96px">
+        <img src="assets/madrinhas.png" alt="Referência de vestidos em marrom chocolate" style="max-width:100%;max-height:100%;object-fit:contain">
+      </div>
+    </section>
+
+    <section data-screen-label="06 Padrinhos" class="mp-pg" style="flex:0 0 100%;height:100%;overflow-y:auto;background:#F3EAE0;color:#2A1B14;display:flex;flex-direction:column">
+      <div style="padding:82px 34px 0">
+        <div style="font:400 9.5px/1 Jost;letter-spacing:.34em;text-transform:uppercase;color:#A08A78">Para os</div>
+        <h2 style="font:300 40px/1.08 'Cormorant Garamond',serif;margin:14px 0 18px">Padrinhos</h2>
+        <p style="font:300 16px/1.68 'Cormorant Garamond',serif;margin:0 0 10px;color:#4A3128;text-wrap:pretty">Seu traje deve incluir um terno bege, camisa branca e sapato branco.</p>
+        <p style="font:400 12.5px/1.55 Jost;margin:0;color:#5C3A2E;letter-spacing:.01em">Nós forneceremos a gravata para garantir que esteja no tom certo.</p>
+      </div>
+      <div style="flex:1;min-height:300px;display:flex;align-items:flex-end;justify-content:center;padding:0 14px 96px">
+        <img src="assets/padrinhos-v2.png" alt="Referência de ternos bege com gravata marrom" style="max-width:100%;max-height:100%;object-fit:contain">
+      </div>
+    </section>
+
+    <section data-screen-label="07 Como chegar" class="mp-pg" style="flex:0 0 100%;height:100%;overflow-y:auto;padding:88px 34px 104px;color:#2A1B14">
+      <div style="font:400 9.5px/1 Jost;letter-spacing:.34em;text-transform:uppercase;color:#A08A78">Como chegar</div>
+      <h2 style="font:300 40px/1.08 'Cormorant Garamond',serif;margin:16px 0 26px">Igreja<br>Santa Edwiges</h2>
+      <div style="height:190px;background:#E9DECF;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden">
+        <div style="position:absolute;inset:0;background-image:repeating-linear-gradient(90deg,rgba(42,27,20,.07) 0 1px,transparent 1px 26px),repeating-linear-gradient(0deg,rgba(42,27,20,.07) 0 1px,transparent 1px 26px)"></div>
+        <div style="position:relative;display:flex;flex-direction:column;align-items:center;gap:10px">
+          <div style="width:13px;height:13px;border-radius:50%;background:#5C3A2E;box-shadow:0 0 0 7px rgba(92,58,46,.16)"></div>
+          <div style="font:400 9.5px/1.4 ui-monospace,Menlo,monospace;letter-spacing:.08em;color:#8A735F;text-align:center">mapa do local<br>[enviem o endereço]</div>
+        </div>
+      </div>
+      <div style="margin-top:24px;display:flex;flex-direction:column;gap:16px">
+        <div>
+          <div style="font:400 9.5px/1 Jost;letter-spacing:.24em;text-transform:uppercase;color:#A08A78;margin-bottom:7px">Endereço</div>
+          <div style="font:300 18px/1.45 'Cormorant Garamond',serif;color:#4A3128">Rua, número — Bairro<br>Cidade / UF</div>
+        </div>
+        <a href="{{ mapsUrl }}" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:10px;padding:16px;background:#3B261C;color:#EFE3D4;font:400 10.5px/1 Jost;letter-spacing:.24em;text-transform:uppercase" style-hover="background:#2A1B14">Abrir no Google Maps</a>
+        <p style="font:300 15px/1.6 'Cormorant Garamond',serif;margin:0;color:#7A6352;text-wrap:pretty">Sugerimos sair com folga e chegar até as 10h30, para conseguirmos organizar o cortejo com calma.</p>
+      </div>
+    </section>
+
+    <section data-screen-label="08 Contagem" class="mp-pg" style="flex:0 0 100%;height:100%;overflow-y:auto;background:#3B261C;color:#EFE3D4;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:72px 30px 104px">
+      <div style="font:400 9.5px/1 Jost;letter-spacing:.34em;text-transform:uppercase;color:rgba(239,227,212,.6)">Faltam</div>
+      <div style="display:flex;gap:6px;margin:30px 0 34px;align-items:flex-start">
+        <sc-for list="{{ countdown }}" as="unit" hint-placeholder-count="4">
+          <div style="min-width:66px;display:flex;flex-direction:column;align-items:center;gap:9px">
+            <div style="font:300 40px/1 'Cormorant Garamond',serif;font-variant-numeric:tabular-nums">{{ unit.value }}</div>
+            <div style="font:400 8.5px/1 Jost;letter-spacing:.2em;text-transform:uppercase;color:rgba(239,227,212,.55)">{{ unit.label }}</div>
+          </div>
+        </sc-for>
+      </div>
+      <div style="width:34px;height:1px;background:rgba(239,227,212,.35)"></div>
+      <p style="font:300 19px/1.6 'Cormorant Garamond',serif;margin:30px 0 0;max-width:290px;color:rgba(239,227,212,.9);text-wrap:pretty">Obrigado por caminharem com a gente até aqui. Nos vemos no dia 28.</p>
+      <div style="font:300 30px/1.15 'Cormorant Garamond',serif;margin-top:26px">Ana <span style="font-style:italic;opacity:.7">e</span> Dhiego</div>
+    </section>
+
+  </div>
+
+  <div style="position:absolute;bottom:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 20px;background:{{ barBg }};backdrop-filter:blur(8px);z-index:6">
+    <button onClick="{{ prev }}" style="flex:0 0 auto;width:44px;height:44px;border:none;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:17px;color:{{ barInk }};opacity:{{ prevOpacity }};transition:opacity .3s">&larr;</button>
+    <div style="flex:1;display:flex;align-items:center;justify-content:center;gap:7px">
+      <sc-for list="{{ dots }}" as="dot" hint-placeholder-count="8">
+        <button onClick="{{ dot.go }}" aria-label="{{ dot.aria }}" style="width:24px;height:24px;padding:0;border:none;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center">
+          <span style="display:block;width:{{ dot.w }};height:5px;border-radius:3px;background:{{ dot.bg }};transition:all .35s"></span>
+        </button>
+      </sc-for>
+    </div>
+    <button onClick="{{ next }}" style="flex:0 0 auto;width:44px;height:44px;border:none;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:17px;color:{{ barInk }};opacity:{{ nextOpacity }};transition:opacity .3s">&rarr;</button>
+  </div>
+
+</div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:420,&quot;height&quot;:860},&quot;dataIso&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;2027-05-28T11:00:00-03:00&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Casamento&quot;},&quot;chocolate&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#4A2C20&quot;,&quot;options&quot;:[&quot;#4A2C20&quot;,&quot;#3B261C&quot;,&quot;#5C3A2E&quot;,&quot;#6B4230&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Casamento&quot;},&quot;enderecoBusca&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Igreja Santa Edwiges&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Casamento&quot;},&quot;mostrarContagem&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Casamento&quot;}}">
+class Component extends DCLogic {
+  state = { i: 0, now: Date.now(), dx: 0 };
+
+  componentDidMount() {
+    this.timer = setInterval(() => this.setState({ now: Date.now() }), 1000);
+    this.onKey = (e) => {
+      if (e.key === 'ArrowRight') this.go(this.state.i + 1);
+      if (e.key === 'ArrowLeft') this.go(this.state.i - 1);
+    };
+    window.addEventListener('keydown', this.onKey);
+  }
+  componentWillUnmount() {
+    clearInterval(this.timer);
+    window.removeEventListener('keydown', this.onKey);
+  }
+
+  total = 8;
+  go(n) {
+    const i = Math.max(0, Math.min(this.total - 1, n));
+    if (i !== this.state.i) this.setState({ i });
+  }
+
+  renderVals() {
+    const { i } = this.state;
+    const dark = i === 0 || i === this.total - 1;
+    const iso = this.props.dataIso ?? '2027-05-28T11:00:00-03:00';
+    const diff = Math.max(0, new Date(iso).getTime() - this.state.now);
+    const s = Math.floor(diff / 1000);
+    const pad = (n) => String(n).padStart(2, '0');
+    const countdown = (this.props.mostrarContagem ?? true) ? [
+      { value: String(Math.floor(s / 86400)), label: 'dias' },
+      { value: pad(Math.floor(s / 3600) % 24), label: 'horas' },
+      { value: pad(Math.floor(s / 60) % 60), label: 'min' },
+      { value: pad(s % 60), label: 'seg' }
+    ] : [];
+
+    const choc = this.props.chocolate ?? '#4A2C20';
+    const local = this.props.enderecoBusca ?? 'Igreja Santa Edwiges';
+
+    return {
+      shift: 'translateX(-' + i * 100 + '%)',
+      progress: ((i + 1) / this.total) * 100 + '%',
+      prev: () => this.go(i - 1),
+      next: () => this.go(i + 1),
+      prevOpacity: i === 0 ? 0.22 : 0.8,
+      nextOpacity: i === this.total - 1 ? 0.22 : 0.8,
+      barBg: dark ? 'rgba(59,38,28,.82)' : 'rgba(250,245,238,.86)',
+      barInk: dark ? '#EFE3D4' : '#3B261C',
+      dots: Array.from({ length: this.total }, (_, n) => ({
+        go: () => this.go(n),
+        aria: 'Página ' + (n + 1),
+        w: n === i ? '18px' : '5px',
+        bg: n === i ? (dark ? '#EFE3D4' : '#5C3A2E') : (dark ? 'rgba(239,227,212,.3)' : 'rgba(42,27,20,.22)')
+      })),
+      countdown,
+      chocolate: choc,
+      chocolateLabel: choc.toUpperCase(),
+      mapsUrl: 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(local),
+      shell: (el) => { this.el = el; },
+      onTouchStart: (e) => { this.t0 = e.touches[0].clientX; this.ty0 = e.touches[0].clientY; this.lock = null; },
+      onTouchMove: (e) => {
+        if (this.t0 == null) return;
+        const dx = e.touches[0].clientX - this.t0;
+        const dy = e.touches[0].clientY - this.ty0;
+        if (this.lock === null && (Math.abs(dx) > 8 || Math.abs(dy) > 8)) this.lock = Math.abs(dx) > Math.abs(dy) ? 'x' : 'y';
+        if (this.lock === 'x') this.dx = dx;
+      },
+      onTouchEnd: () => {
+        if (this.lock === 'x' && Math.abs(this.dx) > 45) this.go(i + (this.dx < 0 ? 1 : -1));
+        this.t0 = null; this.dx = 0; this.lock = null;
+      }
+    };
+  }
+}
+
+</script>
+</body>
+</html>
